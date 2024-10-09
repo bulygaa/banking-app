@@ -1,0 +1,11 @@
+package.json
+package-lock.json
+dist
+build
+node_modules
+.idea
+.eslintrc.json
+.gitignore
+next.config.mjs
+next-env.d.ts
+tsconfig.json
