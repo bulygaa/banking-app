@@ -42,7 +42,7 @@ npm run build
 npm run start
 ```
 
-### Build and start the project with a single command
+### Build and start the project in production mode with a single command
 ```bash
 npm run build-start
 ```
