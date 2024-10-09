@@ -14,8 +14,10 @@ const CommonTable = <T,>({ data, columnConfig, elementsCount }: ICommonTableProp
 									key={index}
 									className={`px-4 py-2 ${column.className || ''}`}
 								>
-									{column.title}
-									{column.sortableName && <SortButton sortField={column.sortableName} />}{' '}
+									<div className='flex items-center'>
+										{column.title}
+										{column.sortableName && <SortButton sortField={column.sortableName} />}
+									</div>
 								</th>
 							))}
 						</tr>

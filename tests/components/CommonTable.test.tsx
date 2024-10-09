@@ -2,6 +2,7 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import { transitionsList } from '@/tests/mocks/transition.mocks';
 import { SUMMARY_PAGE_TABLE_CONFIG } from '@/app/summary/config';
+import { TRANSACTION_TYPE_TO_VALUE } from '@/constants/transactions';
 import { CommonTable } from '@/components/common';
 
 jest.mock('@/components/common/CommonTable/components/Pagination/Pagination.tsx');
@@ -23,6 +24,7 @@ describe('Test CommonTable component', () => {
 			const values = [
 				transitionsList.data[0].amount.toString(),
 				transitionsList.data[0].remainingBalance.toString(),
+				TRANSACTION_TYPE_TO_VALUE[transitionsList.data[0].type],
 				new Date(transitionsList.data[0].date).toLocaleString(undefined, {
 					dateStyle: 'medium',
 					timeStyle: 'short',

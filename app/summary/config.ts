@@ -1,5 +1,6 @@
 import { ColumnConfig } from '@/components/common';
 import { ITransaction } from '@/types/transaction';
+import { TRANSACTION_TYPE_TO_VALUE } from '@/constants/transactions';
 
 export const SUMMARY_PAGE_TABLE_CONFIG: ColumnConfig<ITransaction>[] = [
 	{
@@ -18,5 +19,9 @@ export const SUMMARY_PAGE_TABLE_CONFIG: ColumnConfig<ITransaction>[] = [
 		title: 'Balance',
 		dataIndex: 'remainingBalance',
 		sortableName: 'remaining_balance',
+	},
+	{
+		title: 'Type',
+		render: ({ type }) => TRANSACTION_TYPE_TO_VALUE[type],
 	},
 ];
